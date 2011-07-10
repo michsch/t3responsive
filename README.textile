@@ -1,0 +1,18 @@
+h1. Make TYPO3 4.5.x work with responsive web design
+
+In TYPO3 4.5.x all images generated with content elements (system extension css_styled_content) are renderd with fixed width and height in pixels. At the moment there's no possibility to get a flexible layout with percent including floating images. Ben van't Ende (TYPO3 Communty Manager) sent a "tweet":https://twitter.com/#!/benvantende/status/83896350214864896, that this is planed after the release of TYPO3 version 4.6.
+
+You should know how responsive web design works and what are css media queries.
+
+h2. How does it work
+
+All image containers of images generated with the css_styled_content will get a percentaged width calcutated with help of their parent container. This calculation is only needed, if the window is smaller than your layout acually is designed for (default 980px).
+
+h3. Useful fallback
+
+If a client with a smaller resolution disabled javascript, this plugin won't work. So you can create different default widths for images in different situations. For examples please have a look in the css file _css_styled_content.css_.
+This fallback only works, if you use the css class _no-js_. Have a look in the html file index.html.
+
+h2. Version
+
+0.0.1 alpha - 2011-07-10 not ready for use and just for testing. Do *not* use on live websites! 
