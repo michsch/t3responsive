@@ -26,3 +26,7 @@
 
 /* import print layout | Druck-Layout einbinden */
 @import url(print/print.css);
+
+@media only screen and (max-device-width: 480px) {
+  body { font-size: 87.50%; -webkit-text-size-adjust: none; }
+}
